@@ -4,7 +4,7 @@ const config = {
   // ============================================
 
   // Theme name here, default "Light"
-  theme: "Assymetric Brutalist Lime",
+  theme: "Dark",
 
   // ============================================
   // BASIC INFORMATION
