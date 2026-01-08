@@ -1,4 +1,11 @@
-const portfolio = {
+const config = {
+  // ============================================
+  // THEME
+  // ============================================
+
+  // Theme name here, default "Light"
+  theme: "Assymetric Brutalist Lime",
+
   // ============================================
   // BASIC INFORMATION
   // ============================================
@@ -13,7 +20,7 @@ const portfolio = {
   bio: "I design digital products that people love to use. Focused on creating simple, intuitive experiences.",
 
   // Photo: Put your image URL here, or leave as "placeholder" to show initials
-  photo: "placeholder",
+  photo: "avatar.png",
 
   // ============================================
   // CONTACT & SOCIAL LINKS

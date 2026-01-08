@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Get initials from name
-  const initials = portfolio.name
+  const initials = config.name
     .split(" ")
     .map((n) => n[0])
     .join("");
 
   // Generate photo HTML
   let photoHTML = "";
-  if (portfolio.photo === "placeholder") {
+  if (config.photo === "placeholder") {
     photoHTML = `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:500;background:#0a0a0a;color:#ffffff;letter-spacing:2px;">${initials}</div>`;
   } else {
-    photoHTML = `<img src="${portfolio.photo}" alt="${portfolio.name}">`;
+    photoHTML = `<img src="${config.photo}" alt="${config.name}">`;
   }
 
   // SVG Icons
@@ -26,20 +26,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Generate contact links with icons
   let contactLinks = "";
-  if (portfolio.email) {
-    contactLinks += `<a href="mailto:${portfolio.email}" title="Email" class="icon-link">${emailIcon}</a>`;
+  if (config.email) {
+    contactLinks += `<a href="mailto:${config.email}" title="Email" class="icon-link">${emailIcon}</a>`;
   }
-  if (portfolio.linkedin) {
-    contactLinks += `<a href="https://${portfolio.linkedin}" target="_blank" title="LinkedIn" class="icon-link">${linkedinIcon}</a>`;
+  if (config.linkedin) {
+    contactLinks += `<a href="https://${config.linkedin}" target="_blank" title="LinkedIn" class="icon-link">${linkedinIcon}</a>`;
   }
-  if (portfolio.github) {
-    contactLinks += `<a href="https://${portfolio.github}" target="_blank" title="GitHub" class="icon-link">${githubIcon}</a>`;
+  if (config.github) {
+    contactLinks += `<a href="https://${config.github}" target="_blank" title="GitHub" class="icon-link">${githubIcon}</a>`;
   }
-  if (portfolio.twitter) {
-    contactLinks += `<a href="https://${portfolio.twitter}" target="_blank" title="Twitter" class="icon-link">${twitterIcon}</a>`;
+  if (config.twitter) {
+    contactLinks += `<a href="https://${config.twitter}" target="_blank" title="Twitter" class="icon-link">${twitterIcon}</a>`;
   }
-  if (portfolio.website) {
-    contactLinks += `<a href="https://${portfolio.website}" target="_blank" title="Website" class="icon-link">${websiteIcon}</a>`;
+  if (config.website) {
+    contactLinks += `<a href="https://${config.website}" target="_blank" title="Website" class="icon-link">${websiteIcon}</a>`;
   }
 
   // Function to render different section types
@@ -120,8 +120,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Build all sections
   let sectionsHTML = "";
-  if (portfolio.sections && portfolio.sections.length > 0) {
-    portfolio.sections.forEach((section) => {
+  if (config.sections && config.sections.length > 0) {
+    config.sections.forEach((section) => {
       sectionsHTML += renderSection(section);
     });
   }
@@ -132,12 +132,12 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="profile-photo">
         ${photoHTML}
       </div>
-      <h1>${portfolio.name}</h1>
-      <div class="subtitle">${portfolio.title}</div>
+      <h1>${config.name}</h1>
+      <div class="subtitle">${config.title}</div>
       <div class="contact-icons">
         ${contactLinks}
       </div>
-      <p class="bio">${portfolio.bio}</p>
+      <p class="bio">${config.bio}</p>
     </div>
 
     ${sectionsHTML}
