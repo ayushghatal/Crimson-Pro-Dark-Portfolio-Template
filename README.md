@@ -58,7 +58,7 @@ theme: "Light",
 - `"Light"` - Classic black and white
 - `"Ivory"` - Soft cream background with dark text
 - `"Dark"` - Dark background with light text
-- and 27 more themes see in ![](themes.md)
+- and 27 more URL:[THEMES](THEMES.md)
 
 Just type the theme name exactly as shown above.
 
