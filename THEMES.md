@@ -25,6 +25,7 @@ The default clean black text on white background - timeless and professional.
 
 ### Dark
 <img src="assets/dark.png" alt="Dark Theme" width="800">
+
 ```javascript
 theme: "dark"
 ```
